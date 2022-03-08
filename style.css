@@ -1,0 +1,167 @@
+@font-face {
+    font-family: 'Raleway';
+    src: url('Fonts/Raleway/Raleway-VariableFont_wght.ttf');
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-ms-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+h1 {
+    font-family: Raleway;
+    animation: fadeIn 2s;
+}
+
+.s1 {
+    background: url('images/061\ Sweet\ Period.png');
+    background-size: cover;
+    text-align: left;
+}
+
+.s1 h1 {
+    font-size: 9em;
+    font-weight: 100;
+    margin-bottom: 2px;
+    margin-left: 35px;
+}
+
+.s1 h2 {
+    font-family: Raleway;
+    font-size: 4em;
+    margin: 2px 0px 0px 40px;
+    animation: fadeIn 2s;
+}
+
+.s1 h2 em {
+    color: rgb(125, 249, 255);
+    text-shadow: 1px 1px 3px black;
+    font-weight: 100;
+    font-size: 1.5em;
+    animation: fadeIn 3s;
+}
+
+.s2 {
+    background: url('images/021\ True\ Sunset.png');
+    background-size: cover;
+}
+
+#slide2label {
+    font-family: Raleway;
+    display: inline-block;
+    text-align: left;
+    font-size: 10em;
+    margin-left: 3em;
+}
+
+.s3 {
+    background: url('images/153\ Black\ Sea.png');
+    background-size: cover;
+}
+
+.s3 h2 {
+    font-family: Raleway;
+    font-size: 6em;
+}
+
+#portrait {
+    float: right;
+    height: 200px;
+    border-radius: 200px;
+    margin-top: 15px;
+}
+
+#pixelArtMaker {
+    margin-top: 2%;
+    height: 90%;
+    width: 48%;
+    max-width: 1000px;
+    border-radius: 20px;
+}
+
+#aboutMe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: top;
+    text-align: center;
+    float: right;
+    color: white;
+    font-family: Raleway;
+    font-size: 1.5em;
+    background-color: black;
+    opacity: .9;
+    width: 35%;
+    height: 40%;
+    margin-right: 100px;
+    padding: 5px 35px 5px 35px;
+    border-radius: 15px;
+}
+
+#arrow {
+    float: right;
+    mix-blend-mode: multiply;
+    margin-right: 150px;
+}
+
+#textContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-family: Raleway;
+    float: left;
+    width: 50%;
+    height: 95%;
+    margin-left: 25px;
+    padding: 5px 15px 5px 15px;
+}
+
+#textContent h2 {
+    font-size: 5em;
+    margin: none;
+}
+
+#textContent p {
+    font-size: 2em;
+}
