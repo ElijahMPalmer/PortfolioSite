@@ -210,7 +210,7 @@ h1 {
 }
 
 @media screen and (max-width: 1300px) {
-    article {
+    #main-content {
         flex-direction: column;
         justify-content: center;
     }
