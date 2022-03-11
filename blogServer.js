@@ -9,13 +9,16 @@ app.use(express.json());
 app.use(express.static("public"));
 
 const pool = new Pool({
-    database: 'blog',
+    connectionString: process.env.DATABASE_URL,
+    ssl: {
+        rejectUnauthorized: false,
+    },
 });
 
 app.get('/admin', (req, res) => {
     //res.sendFile(`${__dirname}/public/test.html`);
     pool.query('SELECT * FROM posts;', (err, result) => {
-        res.json(result.rows);
+        res.json(result);
     })
 })
 
