@@ -53,12 +53,19 @@ h1 {
     margin-top: 0px;
 }
 
-article {
+#main-content {
     margin: auto 0px auto 0px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-content: center;
+}
+
+#project-pointer-content {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
 }
 
 .s1 {
@@ -88,9 +95,8 @@ article {
 #slide2label {
     font-family: Raleway;
     display: inline-block;
-    text-align: left;
-    font-size: 10em;
-    margin-left: 3em;
+    font-size: 150px;
+    margin: 0px auto 0px auto;
 }
 
 .s3 {
@@ -174,9 +180,11 @@ article {
 }
 
 #arrow {
-    float: right;
     mix-blend-mode: multiply;
-    margin-right: 150px;
+}
+
+#arrow-anchor {
+    margin: 0px auto 0px auto;
 }
 
 #textContent {
