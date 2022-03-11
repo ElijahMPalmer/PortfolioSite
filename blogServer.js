@@ -15,7 +15,7 @@ const pool = new Pool({
 app.get('/admin', (req, res) => {
     //res.sendFile(`${__dirname}/public/test.html`);
     pool.query('SELECT * FROM posts;', (err, result) => {
-        res.send(result);
+        res.json(result.rows);
     })
 })
 
