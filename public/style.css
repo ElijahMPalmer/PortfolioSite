@@ -48,6 +48,16 @@
     }
 }
 
+#admin-login {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: black;
+    opacity: 1;
+    background-color: transparent;
+    border: none;
+}
+
 h1 {
     font-family: Raleway;
     margin-top: 0px;
