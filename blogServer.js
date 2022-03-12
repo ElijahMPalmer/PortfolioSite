@@ -6,8 +6,9 @@ const bcrypt = require('bcrypt');
 const { Router } = require('express');
 const { Pool } = require('pg');
 app.use(express.json());
+
 app.use(express.static("public"));
-app.use(express.static("public/pixel-art-maker"))
+app.use(express.static("pixel-art-maker"))
 
 const pool = new Pool({
     connectionString: process.env.DATABASE_URL,
