@@ -1,4 +1,5 @@
 DROP TABLE IF EXISTS posts;
+DROP TABLE IF EXISTS admin;
 
 CREATE TABLE posts (
     id SERIAL PRIMARY KEY,
@@ -7,5 +8,5 @@ CREATE TABLE posts (
 
 CREATE TABLE admin (
     id SERIAL PRIMARY KEY,
-    passkey text
+    passkey TEXT
 );

@@ -17,19 +17,47 @@ const pool = new Pool({
 });
 
 app.get('/', (req, res) => {
-    console.log("req", req);
-    console.log("res", res);
     res.send();
 })
 
-app.get('/admin', (req, res) => {
+app.get('/login/:passkey', async(req, res) => {
+    const passkey = req.params.passkey;
+    try {
+        const hashedPassword = await bcrypt.hash(passkey, 10);
+        pool.query('SELECT passkey FROM admin;', async(err, result) => {
+            if (await bcrypt.compare(passkey, result.rows[0].passkey)) {
+                console.log('success');
+                res.send("Success");
+            } else {
+                console.log('access denied')
+                res.send("denied");
+            }
+        })
+    } catch {
+        res.status(500);
+        res.send();
+    }
+})
 
-    //res.sendFile(`${__dirname}/public/test.html`);
-    pool.query('SELECT * FROM posts;', (err, result) => {
-        res.json(result.rows);
-
+app.get('/blog', (req, res) => {
+    pool.query('SELECT content FROM posts;', (err, result) => {
+        res.send(result.rows);
     })
 })
+
+app.post('/blog', (req, res) => {
+    const newBlog = req.body.data;
+    console.log(newBlog);
+    pool.query("INSERT INTO posts (content) VALUES ($1) RETURNING *;", [newBlog])
+        .then((result) => {
+            console.log(result.rows[0]);
+            res.send(result.rows[0]);
+        }).catch((err) => {
+            console.log(err)
+            res.sendStatus(500);
+        })
+})
+
 
 app.listen(PORT, function() {
     console.log('Server is running on PORT: ' + PORT)

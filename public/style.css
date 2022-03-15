@@ -58,6 +58,14 @@
     border: none;
 }
 
+#admin-login:hover {
+    cursor: grab;
+}
+
+#admin-login:focus {
+    border: 0;
+}
+
 h1 {
     font-family: Raleway;
     margin-top: 0px;
@@ -111,6 +119,10 @@ h1 {
 .s3 {
     background: url('images/153\ Black\ Sea.png');
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .s3 h2 {
@@ -133,11 +145,26 @@ h1 {
     border-radius: 20px;
 }
 
+#car-wiz {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#Car-Wiz-Photo {
+    width: 30%;
+}
+
+#car-wiz-link {
+    font-size: 1.5em;
+}
+
 #aboutMe {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: top;
+    justify-content: center;
     text-align: center;
     float: right;
     color: white;
@@ -147,7 +174,7 @@ h1 {
     opacity: .9;
     width: 35%;
     height: 60%;
-    margin: auto 100px auto 0px;
+    max-height: 625px;
     padding: 5px 35px 5px 35px;
     border-radius: 15px;
 }
@@ -169,7 +196,7 @@ h1 {
     height: 40px;
     width: 40px;
     margin-bottom: 10px;
-    /* margin-left: 10px; */
+    margin-left: 10px;
 }
 
 #network-links {
@@ -200,13 +227,14 @@ h1 {
     text-align: center;
     font-family: Raleway;
     float: left;
+    font-size: 1em;
     width: 45%;
     margin: 5px auto 5px auto;
     padding: 5px 15px 5px 15px;
 }
 
 #textContent h2 {
-    font-size: 80px;
+    font-size: 2em;
     margin: none;
 }
 
@@ -221,17 +249,61 @@ h1 {
     font-size: 2em;
 }
 
+#blog-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    margin: 50px 5px 50px 5px;
+    padding: 0px 40px 0px 40px;
+}
+
+#blog {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 90%;
+    height: 50em;
+    overflow-y: auto;
+}
+
+#blog::-webkit-scrollbar-thumb {
+    background-color: blue;
+    border-radius: 20px;
+}
+
+#blog-entry {
+    width: 20px;
+}
+
+.post {
+    text-align: center;
+    padding: 10px 10px;
+    margin: 8px 0px 8px 0px;
+    width: 80%;
+    color: white;
+    font-family: Raleway;
+    font-size: 20px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, .7);
+    overflow-y: auto;
+}
+
 @media screen and (max-width: 1300px) {
     #main-content {
         flex-direction: column;
         justify-content: center;
+        align-items: center;
     }
     #intro {
         margin: 0px auto 60px auto;
         height: 200px;
     }
     #aboutMe {
-        margin: 0px auto 100px auto;
+        margin: 0px auto 40px auto;
         min-width: 300px;
     }
     .s1 h1 {
@@ -247,14 +319,18 @@ h1 {
     #arrow {
         width: 180px;
     }
-    #pixel-art-maker {
+    #car-wiz {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
     }
+    #Car-Wiz-Photo {
+        width: 75%;
+    }
     #textContent {
         width: 95%;
+        font-size: .5em;
     }
     #textContent h2 {
         font-size: 45px;
