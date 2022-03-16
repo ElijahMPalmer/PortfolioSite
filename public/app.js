@@ -21,11 +21,10 @@ $passwordEntry.on("submit", function(e) {
 
 const loggedIn = localStorage.getItem("login");
 if (loggedIn === "success") {
-    const $blogPostBar = $(`<div class="input-group mb-3">
-    <input type="text" class="form-control" id="blog-entry" placeholder="What did you do today?" aria-label="Recipient's username" aria-describedby="button-addon2">
-    <button class="btn btn-dark" type="button" id="submit-button" onClick="submitBlog()">Submit</button>
-  </div>`);
+    const $blogPostBar = $(`<textarea name="editor1" id="editor1" rows="10" cols="80"></textarea><button class="btn btn-dark" type="button" id="submit-button" onClick="submitBlog()">Submit</button>`);
     $blogPostBar.prependTo($blogContainer);
+    CKEDITOR.replace('editor1');
+    $blog.css("height", "50%")
 }
 
 
@@ -35,11 +34,10 @@ $passwordEntry.on("keyup", function(event) {
             if (data === "Success") {
                 localStorage.setItem("login", "success")
                 $blog.css("height: 80%");
-                const $blogPostBar = $(`<div class="input-group mb-3">
-                <input type="text" class="form-control" id="blog-entry" placeholder="What did you do today?" aria-label="Recipient's username" aria-describedby="button-addon2">
-                <button class="btn btn-dark" type="button" id="submit-button" onClick="submitBlog()">Submit</button>
-              </div>`);
+                const $blogPostBar = $(`<textarea name="editor1" id="editor1" rows="10" cols="80"></textarea><button class="btn btn-dark" type="button" id="submit-button" onClick="submitBlog()">Submit</button>`);
                 $blogPostBar.prependTo($blogContainer);
+                CKEDITOR.replace('editor1');
+                $blog.css("height", "50%")
 
             }
         });
@@ -49,16 +47,13 @@ $passwordEntry.on("keyup", function(event) {
 
 
 function submitBlog() {
-    const $blogEntry = $("#blog-entry");
-    const $blogButton = $("#submit-button");
-    const post = $blogEntry.val();
-
-    if (post.length <= 1) {
+    const data = CKEDITOR.instances.editor1.getData();
+    if (data.length <= 1) {
         alert("Oops! That message is too short!");
         return -1;
     } else {
-        if (confirm('Are you sure you want to add: \n"' + post + '"?') == true) {
-            const blogData = JSON.stringify({ data: post });
+        if (confirm('Are you sure you want to add: \n"' + data + '"?') == true) {
+            const blogData = JSON.stringify({ data: data });
             $.post({ url: BASE_URL + "/blog", contentType: "application/json; charset=utf-8", data: blogData })
                 .done(function(data) {
                     alert("Data Loaded: " + data);
