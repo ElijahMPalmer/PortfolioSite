@@ -339,6 +339,9 @@ h1 {
     #pixelArtMaker {
         display: none;
     }
+    #aboutMe p {
+        font-size: 15px;
+    }
 }
 
 
