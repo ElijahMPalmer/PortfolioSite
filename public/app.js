@@ -24,7 +24,7 @@ if (loggedIn === "success") {
     const $blogPostBar = $(`<textarea name="editor1" id="editor1" rows="10" cols="80"></textarea><button class="btn btn-dark" type="button" id="submit-button" onClick="submitBlog()">Submit</button>`);
     $blogPostBar.prependTo($blogContainer);
     CKEDITOR.replace('editor1');
-    $blog.css("height", "50%")
+    $blog.css("height", "30%")
 }
 
 
@@ -33,11 +33,10 @@ $passwordEntry.on("keyup", function(event) {
         $.get(BASE_URL + "/login/" + $passwordEntry.val(), (data) => {
             if (data === "Success") {
                 localStorage.setItem("login", "success")
-                $blog.css("height: 80%");
                 const $blogPostBar = $(`<textarea name="editor1" id="editor1" rows="10" cols="80"></textarea><button class="btn btn-dark" type="button" id="submit-button" onClick="submitBlog()">Submit</button>`);
                 $blogPostBar.prependTo($blogContainer);
                 CKEDITOR.replace('editor1');
-                $blog.css("height", "50%")
+                $blog.css("height", "30%")
 
             }
         });
@@ -47,6 +46,7 @@ $passwordEntry.on("keyup", function(event) {
 
 
 function submitBlog() {
+    $blog.empty();
     const data = CKEDITOR.instances.editor1.getData();
     if (data.length <= 1) {
         alert("Oops! That message is too short!");
