@@ -266,8 +266,12 @@ h1 {
     justify-content: flex-start;
     align-items: center;
     width: 90%;
-    height: 50em;
+    height: 80%;
     overflow-y: auto;
+}
+
+#editor1 {
+    margin-top: 30px;
 }
 
 #blog::-webkit-scrollbar-thumb {
@@ -280,7 +284,7 @@ h1 {
 }
 
 .post {
-    text-align: center;
+    text-align: left;
     padding: 10px 10px;
     margin: 8px 0px 8px 0px;
     width: 80%;
@@ -289,7 +293,6 @@ h1 {
     font-size: 20px;
     border-radius: 5px;
     background-color: rgba(0, 0, 0, .7);
-    overflow-y: auto;
 }
 
 @media screen and (max-width: 1300px) {

@@ -20,6 +20,7 @@
     "homepage": "https://github.com/ElijahMPalmer/PortfolioSite#readme",
     "dependencies": {
         "bcrypt": "^5.0.1",
+        "ckeditor4": "^4.18.0",
         "dotenv": "^16.0.0",
         "express": "^4.17.3",
         "jsonwebtoken": "^8.5.1",
