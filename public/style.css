@@ -357,4 +357,8 @@ h1 {
     #aboutMe p {
         font-size: 12px;
     }
+    #aboutMe {
+        margin: 0px auto 40px auto;
+        min-width: 220px;
+    }
 }
