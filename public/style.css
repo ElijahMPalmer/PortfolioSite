@@ -346,6 +346,15 @@ h1 {
 
 @media screen and (max-width: 1000px) {
     #portrait {
-        height: 100px;
+        height: 75px;
+    }
+    .icons {
+        height: 25px;
+        width: 25px;
+        margin-bottom: 6px;
+        margin-left: 6px;
+    }
+    #aboutMe p {
+        font-size: 12px;
     }
 }
