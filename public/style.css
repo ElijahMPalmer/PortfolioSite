@@ -344,24 +344,8 @@ h1 {
     }
 }
 
-
-/* @media screen and (max-width: 1300px) {
-    #main-content {
-        flex-direction: column;
-        justify-content: center;
+@media screen and (max-width: 1000px) {
+    #portrait {
+        height: 150px;
     }
-    #intro {
-        margin: 0px auto 60px auto;
-        height: 200px;
-    }
-    #aboutMe {
-        margin: 0px auto 100px auto;
-        min-width: 300px;
-    }
-    .s1 h1 {
-        font-size: 100px;
-    }
-    .s1 h2 {
-        font-size: 40px;
-    }
-} */
+}
