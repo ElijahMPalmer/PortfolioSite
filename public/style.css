@@ -346,6 +346,6 @@ h1 {
 
 @media screen and (max-width: 1000px) {
     #portrait {
-        height: 150px;
+        height: 100px;
     }
 }
