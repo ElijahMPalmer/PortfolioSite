@@ -19,13 +19,13 @@ $passwordEntry.on("submit", function(e) {
 
 });
 
-const loggedIn = localStorage.getItem("login");
-if (loggedIn === "success") {
-    const $blogPostBar = $(`<textarea name="editor1" id="editor1" rows="10" cols="80"></textarea><button class="btn btn-dark" type="button" id="submit-button" onClick="submitBlog()">Submit</button>`);
-    $blogPostBar.prependTo($blogContainer);
-    CKEDITOR.replace('editor1');
-    $blog.css("height", "30%")
-}
+// const loggedIn = localStorage.getItem("login");
+// if (loggedIn === "success") {
+//     const $blogPostBar = $(`<textarea name="editor1" id="editor1" rows="10" cols="80"></textarea><button class="btn btn-dark" type="button" id="submit-button" onClick="submitBlog()">Submit</button>`);
+//     $blogPostBar.prependTo($blogContainer);
+//     CKEDITOR.replace('editor1');
+//     $blog.css("height", "30%")
+// }
 
 
 $passwordEntry.on("keyup", function(event) {
@@ -68,6 +68,7 @@ function printBlogPosts() {
 
         for (let i = 0; i < data.length; i++) {
             const $post = $("<div class='post'></div>");
+
             $post.html(data[i].content);
             $post.prependTo($blog);
         }
