@@ -19,13 +19,6 @@ $passwordEntry.on("submit", function(e) {
 
 });
 
-// const loggedIn = localStorage.getItem("login");
-// if (loggedIn === "success") {
-//     const $blogPostBar = $(`<textarea name="editor1" id="editor1" rows="10" cols="80"></textarea><button class="btn btn-dark" type="button" id="submit-button" onClick="submitBlog()">Submit</button>`);
-//     $blogPostBar.prependTo($blogContainer);
-//     CKEDITOR.replace('editor1');
-//     $blog.css("height", "30%")
-// }
 
 
 $passwordEntry.on("keyup", function(event) {
