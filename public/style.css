@@ -265,8 +265,8 @@ h1 {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    width: 90%;
-    height: 80%;
+    width: 95%;
+    height: 40%;
     overflow-y: auto;
 }
 
@@ -287,7 +287,7 @@ h1 {
     text-align: left;
     padding: 10px 10px;
     margin: 8px 0px 8px 0px;
-    width: 80%;
+    width: 95%;
     color: white;
     font-family: Raleway;
     font-size: 20px;
@@ -363,6 +363,12 @@ h1 {
     #aboutMe {
         margin: 0px auto 40px auto;
         min-width: 220px;
+    }
+    .post h1 {
+        font-size: 20px;
+    }
+    .post p {
+        font-size: 12px;
     }
 }
 
