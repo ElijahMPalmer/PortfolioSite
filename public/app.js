@@ -5,6 +5,7 @@ new fullpage("#fullpage", {
     slidesNavigation: true,
     slidesNavPosition: "bottom",
     anchors: ["section1", "section2", "section3"],
+    normalScrollElements: '#blog'
 });
 
 const BASE_URL = window.location.origin;
@@ -14,11 +15,6 @@ const $passwordEntry = $("#admin-login");
 const $blog = $("#blog");
 const $blogPage = $(".s3");
 const $blogContainer = $("#blog-container");
-
-$passwordEntry.on("submit", function(e) {
-
-});
-
 
 
 $passwordEntry.on("keyup", function(event) {
