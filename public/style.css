@@ -255,7 +255,6 @@ h1 {
     justify-content: flex-start;
     align-items: center;
     text-align: center;
-    height: 100%;
     margin: 50px 5px 50px 5px;
     padding: 0px 40px 0px 40px;
 }
@@ -385,5 +384,8 @@ h1 {
     }
     .s1 h2 {
         font-size: 25px;
+    }
+    #blog {
+        height: 400px;
     }
 }
